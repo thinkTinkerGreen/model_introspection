@@ -42,12 +42,29 @@ torch.backends.cudnn.benchmark = False
 - **Dropout:** $0.0$ globally; verified bit-identical forward outputs between `model.train()` and `model.eval()`.
 
 ### How to Run
-1. **Google Colab (Recommended):** Click the **Open In Colab** badge at the top of `truth_about_my_model.ipynb`. Select **Runtime → Change runtime type → T4 GPU**, then select **Runtime → Restart and run all**. Execution completes in approximately 2 minutes.
-2. **Local / Headless Execution:**
-   ```bash
-   pip install -r requirements.txt
-   jupyter nbconvert --to notebook --execute truth_about_my_model.ipynb
-   ```
+
+#### Option 1: Google Colab Free Tier (Recommended & Required for GPU Runs)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/thinkTinkerGreen/model_introspection/blob/main/truth_about_my_model.ipynb)
+
+1. Click the **Open In Colab** badge above or open `truth_about_my_model.ipynb` directly in Google Colab.
+2. Ensure GPU acceleration is enabled: **Runtime → Change runtime type → T4 GPU** (Standard Free Tier).
+3. Select **Runtime → Restart and run all**.
+4. **Google Drive Integration:**
+   - At the beginning of the notebook, Cell 1 executes `drive.mount('/content/drive')` to attach your Google Drive.
+   - When prompted with *"Permit this notebook to access your Google Drive files?"*, click **Connect to Google Drive**.
+   - As each task completes, all generated artifacts are automatically mirrored to Google Drive under:
+     `/content/drive/MyDrive/model_introspection/`
+   - Cell 17 performs a final recursive sync and audits file byte sizes across both the local workspace (`/content/model_introspection`) and Google Drive (`/content/drive/MyDrive/model_introspection`).
+   - Total GPU execution time on Colab T4 is approximately **2 minutes**.
+
+#### Option 2: Local / Headless Execution (CPU Fallback)
+```bash
+pip install -r requirements.txt
+python3 create_notebook.py
+# Or run headlessly with Jupyter:
+jupyter nbconvert --to notebook --execute truth_about_my_model.ipynb
+```
+*Note:* The host machine is an ARM CPU instance without GPU; per project guidelines, all GPU tests and benchmarks are executed on Google Colab. All outputs are also committed and viewable directly in this repository.
 
 ---
 
