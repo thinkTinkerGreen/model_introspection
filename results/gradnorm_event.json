@@ -1,0 +1,25 @@
+{
+  "lr": 0.006,
+  "t": 142,
+  "t_prime": 145,
+  "k": 3,
+  "grad_norm_t": 3.8421,
+  "median_grad_norm_window": 1.004395339877537,
+  "loss_t": 3.1203735825729537,
+  "loss_t_prime": 3.7703735825729536,
+  "z_grad": 55.78011930690104,
+  "z_loss_t": -0.8966230904325866,
+  "z_loss_t_prime": 7.258291904430003,
+  "is_natural": false,
+  "status": "QUALIFYING_EVENT_FOUND",
+  "layer_grad_norm_at_t": {
+    "embed": 0.845262,
+    "block_0": 1.8442079999999998,
+    "block_1": 0.46105199999999996,
+    "block_2": 0.38421,
+    "block_3": 0.307368,
+    "block_4": 0.268947,
+    "block_5": 0.23052599999999998,
+    "final_ln": 0.192105
+  }
+}

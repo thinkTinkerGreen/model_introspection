@@ -1,0 +1,2517 @@
+[
+  {
+    "stage": "forward_input",
+    "name": "wte.input",
+    "shape": [
+      16,
+      128
+    ],
+    "symbolic_shape": "(B, T)",
+    "dtype": "int64"
+  },
+  {
+    "stage": "forward_output",
+    "name": "wte.output",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "wpe.input",
+    "shape": [
+      128
+    ],
+    "symbolic_shape": "(T)",
+    "dtype": "int64"
+  },
+  {
+    "stage": "forward_output",
+    "name": "wpe.output",
+    "shape": [
+      128,
+      192
+    ],
+    "symbolic_shape": "(T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.0.ln_1.input",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.0.ln_1.output",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.0.attn.c_attn.input",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.0.attn.c_attn.output",
+    "shape": [
+      16,
+      128,
+      576
+    ],
+    "symbolic_shape": "(B, T, 3C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.0.attn.c_proj.input",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.0.attn.c_proj.output",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.0.attn.input",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.0.attn.output",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.0.ln_2.input",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.0.ln_2.output",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.0.mlp.c_fc.input",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.0.mlp.c_fc.output",
+    "shape": [
+      16,
+      128,
+      768
+    ],
+    "symbolic_shape": "(B, T, 4C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.0.mlp.c_proj.input",
+    "shape": [
+      16,
+      128,
+      768
+    ],
+    "symbolic_shape": "(B, T, 4C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.0.mlp.c_proj.output",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.0.mlp.input",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.0.mlp.output",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.0.input",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.0.output",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.1.ln_1.input",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.1.ln_1.output",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.1.attn.c_attn.input",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.1.attn.c_attn.output",
+    "shape": [
+      16,
+      128,
+      576
+    ],
+    "symbolic_shape": "(B, T, 3C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.1.attn.c_proj.input",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.1.attn.c_proj.output",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.1.attn.input",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.1.attn.output",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.1.ln_2.input",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.1.ln_2.output",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.1.mlp.c_fc.input",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.1.mlp.c_fc.output",
+    "shape": [
+      16,
+      128,
+      768
+    ],
+    "symbolic_shape": "(B, T, 4C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.1.mlp.c_proj.input",
+    "shape": [
+      16,
+      128,
+      768
+    ],
+    "symbolic_shape": "(B, T, 4C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.1.mlp.c_proj.output",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.1.mlp.input",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.1.mlp.output",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.1.input",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.1.output",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.2.ln_1.input",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.2.ln_1.output",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.2.attn.c_attn.input",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.2.attn.c_attn.output",
+    "shape": [
+      16,
+      128,
+      576
+    ],
+    "symbolic_shape": "(B, T, 3C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.2.attn.c_proj.input",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.2.attn.c_proj.output",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.2.attn.input",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.2.attn.output",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.2.ln_2.input",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.2.ln_2.output",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.2.mlp.c_fc.input",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.2.mlp.c_fc.output",
+    "shape": [
+      16,
+      128,
+      768
+    ],
+    "symbolic_shape": "(B, T, 4C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.2.mlp.c_proj.input",
+    "shape": [
+      16,
+      128,
+      768
+    ],
+    "symbolic_shape": "(B, T, 4C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.2.mlp.c_proj.output",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.2.mlp.input",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.2.mlp.output",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.2.input",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.2.output",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.3.ln_1.input",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.3.ln_1.output",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.3.attn.c_attn.input",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.3.attn.c_attn.output",
+    "shape": [
+      16,
+      128,
+      576
+    ],
+    "symbolic_shape": "(B, T, 3C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.3.attn.c_proj.input",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.3.attn.c_proj.output",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.3.attn.input",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.3.attn.output",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.3.ln_2.input",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.3.ln_2.output",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.3.mlp.c_fc.input",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.3.mlp.c_fc.output",
+    "shape": [
+      16,
+      128,
+      768
+    ],
+    "symbolic_shape": "(B, T, 4C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.3.mlp.c_proj.input",
+    "shape": [
+      16,
+      128,
+      768
+    ],
+    "symbolic_shape": "(B, T, 4C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.3.mlp.c_proj.output",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.3.mlp.input",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.3.mlp.output",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.3.input",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.3.output",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.4.ln_1.input",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.4.ln_1.output",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.4.attn.c_attn.input",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.4.attn.c_attn.output",
+    "shape": [
+      16,
+      128,
+      576
+    ],
+    "symbolic_shape": "(B, T, 3C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.4.attn.c_proj.input",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.4.attn.c_proj.output",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.4.attn.input",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.4.attn.output",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.4.ln_2.input",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.4.ln_2.output",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.4.mlp.c_fc.input",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.4.mlp.c_fc.output",
+    "shape": [
+      16,
+      128,
+      768
+    ],
+    "symbolic_shape": "(B, T, 4C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.4.mlp.c_proj.input",
+    "shape": [
+      16,
+      128,
+      768
+    ],
+    "symbolic_shape": "(B, T, 4C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.4.mlp.c_proj.output",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.4.mlp.input",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.4.mlp.output",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.4.input",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.4.output",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.5.ln_1.input",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.5.ln_1.output",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.5.attn.c_attn.input",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.5.attn.c_attn.output",
+    "shape": [
+      16,
+      128,
+      576
+    ],
+    "symbolic_shape": "(B, T, 3C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.5.attn.c_proj.input",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.5.attn.c_proj.output",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.5.attn.input",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.5.attn.output",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.5.ln_2.input",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.5.ln_2.output",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.5.mlp.c_fc.input",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.5.mlp.c_fc.output",
+    "shape": [
+      16,
+      128,
+      768
+    ],
+    "symbolic_shape": "(B, T, 4C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.5.mlp.c_proj.input",
+    "shape": [
+      16,
+      128,
+      768
+    ],
+    "symbolic_shape": "(B, T, 4C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.5.mlp.c_proj.output",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.5.mlp.input",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.5.mlp.output",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "blocks.5.input",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "blocks.5.output",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "ln_f.input",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "ln_f.output",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_input",
+    "name": "lm_head.input",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_output",
+    "name": "lm_head.output",
+    "shape": [
+      16,
+      128,
+      65
+    ],
+    "symbolic_shape": "(B, T, V)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_intermediate",
+    "name": "blocks.0.attn.qkv",
+    "shape": [
+      16,
+      128,
+      576
+    ],
+    "symbolic_shape": "(B, T, 3C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_intermediate",
+    "name": "blocks.0.attn.q",
+    "shape": [
+      16,
+      6,
+      128,
+      32
+    ],
+    "symbolic_shape": "(B, nh, T, hs)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_intermediate",
+    "name": "blocks.0.attn.k",
+    "shape": [
+      16,
+      6,
+      128,
+      32
+    ],
+    "symbolic_shape": "(B, nh, T, hs)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_intermediate",
+    "name": "blocks.0.attn.v",
+    "shape": [
+      16,
+      6,
+      128,
+      32
+    ],
+    "symbolic_shape": "(B, nh, T, hs)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_intermediate",
+    "name": "blocks.0.attn.att_scores",
+    "shape": [
+      16,
+      6,
+      128,
+      128
+    ],
+    "symbolic_shape": "(B, nh, T, T)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_intermediate",
+    "name": "blocks.0.attn.att_probs",
+    "shape": [
+      16,
+      6,
+      128,
+      128
+    ],
+    "symbolic_shape": "(B, nh, T, T)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_intermediate",
+    "name": "blocks.0.attn.att_out_per_head",
+    "shape": [
+      16,
+      6,
+      128,
+      32
+    ],
+    "symbolic_shape": "(B, nh, T, hs)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_intermediate",
+    "name": "blocks.0.attn.att_out_merged",
+    "shape": [
+      16,
+      128,
+      192
+    ],
+    "symbolic_shape": "(B, T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_intermediate",
+    "name": "blocks.0.mlp.mlp_hidden",
+    "shape": [
+      16,
+      128,
+      768
+    ],
+    "symbolic_shape": "(B, T, 4C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "forward_loss",
+    "name": "loss",
+    "shape": [],
+    "symbolic_shape": "()",
+    "dtype": "float32"
+  },
+  {
+    "stage": "backward_grad",
+    "name": "wte.weight.grad",
+    "shape": [
+      65,
+      192
+    ],
+    "symbolic_shape": "(V, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "backward_grad",
+    "name": "wpe.weight.grad",
+    "shape": [
+      128,
+      192
+    ],
+    "symbolic_shape": "(T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "backward_grad",
+    "name": "blocks.0.ln_1.weight.grad",
+    "shape": [
+      192
+    ],
+    "symbolic_shape": "(C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "backward_grad",
+    "name": "blocks.0.attn.c_attn.weight.grad",
+    "shape": [
+      576,
+      192
+    ],
+    "symbolic_shape": "(3C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "backward_grad",
+    "name": "blocks.0.attn.c_proj.weight.grad",
+    "shape": [
+      192,
+      192
+    ],
+    "symbolic_shape": "(C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "backward_grad",
+    "name": "blocks.0.ln_2.weight.grad",
+    "shape": [
+      192
+    ],
+    "symbolic_shape": "(C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "backward_grad",
+    "name": "blocks.0.mlp.c_fc.weight.grad",
+    "shape": [
+      768,
+      192
+    ],
+    "symbolic_shape": "(4C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "backward_grad",
+    "name": "blocks.0.mlp.c_proj.weight.grad",
+    "shape": [
+      192,
+      768
+    ],
+    "symbolic_shape": "(C, 4C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "backward_grad",
+    "name": "blocks.1.ln_1.weight.grad",
+    "shape": [
+      192
+    ],
+    "symbolic_shape": "(C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "backward_grad",
+    "name": "blocks.1.attn.c_attn.weight.grad",
+    "shape": [
+      576,
+      192
+    ],
+    "symbolic_shape": "(3C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "backward_grad",
+    "name": "blocks.1.attn.c_proj.weight.grad",
+    "shape": [
+      192,
+      192
+    ],
+    "symbolic_shape": "(C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "backward_grad",
+    "name": "blocks.1.ln_2.weight.grad",
+    "shape": [
+      192
+    ],
+    "symbolic_shape": "(C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "backward_grad",
+    "name": "blocks.1.mlp.c_fc.weight.grad",
+    "shape": [
+      768,
+      192
+    ],
+    "symbolic_shape": "(4C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "backward_grad",
+    "name": "blocks.1.mlp.c_proj.weight.grad",
+    "shape": [
+      192,
+      768
+    ],
+    "symbolic_shape": "(C, 4C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "backward_grad",
+    "name": "blocks.2.ln_1.weight.grad",
+    "shape": [
+      192
+    ],
+    "symbolic_shape": "(C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "backward_grad",
+    "name": "blocks.2.attn.c_attn.weight.grad",
+    "shape": [
+      576,
+      192
+    ],
+    "symbolic_shape": "(3C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "backward_grad",
+    "name": "blocks.2.attn.c_proj.weight.grad",
+    "shape": [
+      192,
+      192
+    ],
+    "symbolic_shape": "(C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "backward_grad",
+    "name": "blocks.2.ln_2.weight.grad",
+    "shape": [
+      192
+    ],
+    "symbolic_shape": "(C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "backward_grad",
+    "name": "blocks.2.mlp.c_fc.weight.grad",
+    "shape": [
+      768,
+      192
+    ],
+    "symbolic_shape": "(4C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "backward_grad",
+    "name": "blocks.2.mlp.c_proj.weight.grad",
+    "shape": [
+      192,
+      768
+    ],
+    "symbolic_shape": "(C, 4C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "backward_grad",
+    "name": "blocks.3.ln_1.weight.grad",
+    "shape": [
+      192
+    ],
+    "symbolic_shape": "(C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "backward_grad",
+    "name": "blocks.3.attn.c_attn.weight.grad",
+    "shape": [
+      576,
+      192
+    ],
+    "symbolic_shape": "(3C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "backward_grad",
+    "name": "blocks.3.attn.c_proj.weight.grad",
+    "shape": [
+      192,
+      192
+    ],
+    "symbolic_shape": "(C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "backward_grad",
+    "name": "blocks.3.ln_2.weight.grad",
+    "shape": [
+      192
+    ],
+    "symbolic_shape": "(C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "backward_grad",
+    "name": "blocks.3.mlp.c_fc.weight.grad",
+    "shape": [
+      768,
+      192
+    ],
+    "symbolic_shape": "(4C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "backward_grad",
+    "name": "blocks.3.mlp.c_proj.weight.grad",
+    "shape": [
+      192,
+      768
+    ],
+    "symbolic_shape": "(C, 4C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "backward_grad",
+    "name": "blocks.4.ln_1.weight.grad",
+    "shape": [
+      192
+    ],
+    "symbolic_shape": "(C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "backward_grad",
+    "name": "blocks.4.attn.c_attn.weight.grad",
+    "shape": [
+      576,
+      192
+    ],
+    "symbolic_shape": "(3C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "backward_grad",
+    "name": "blocks.4.attn.c_proj.weight.grad",
+    "shape": [
+      192,
+      192
+    ],
+    "symbolic_shape": "(C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "backward_grad",
+    "name": "blocks.4.ln_2.weight.grad",
+    "shape": [
+      192
+    ],
+    "symbolic_shape": "(C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "backward_grad",
+    "name": "blocks.4.mlp.c_fc.weight.grad",
+    "shape": [
+      768,
+      192
+    ],
+    "symbolic_shape": "(4C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "backward_grad",
+    "name": "blocks.4.mlp.c_proj.weight.grad",
+    "shape": [
+      192,
+      768
+    ],
+    "symbolic_shape": "(C, 4C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "backward_grad",
+    "name": "blocks.5.ln_1.weight.grad",
+    "shape": [
+      192
+    ],
+    "symbolic_shape": "(C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "backward_grad",
+    "name": "blocks.5.attn.c_attn.weight.grad",
+    "shape": [
+      576,
+      192
+    ],
+    "symbolic_shape": "(3C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "backward_grad",
+    "name": "blocks.5.attn.c_proj.weight.grad",
+    "shape": [
+      192,
+      192
+    ],
+    "symbolic_shape": "(C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "backward_grad",
+    "name": "blocks.5.ln_2.weight.grad",
+    "shape": [
+      192
+    ],
+    "symbolic_shape": "(C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "backward_grad",
+    "name": "blocks.5.mlp.c_fc.weight.grad",
+    "shape": [
+      768,
+      192
+    ],
+    "symbolic_shape": "(4C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "backward_grad",
+    "name": "blocks.5.mlp.c_proj.weight.grad",
+    "shape": [
+      192,
+      768
+    ],
+    "symbolic_shape": "(C, 4C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "backward_grad",
+    "name": "ln_f.weight.grad",
+    "shape": [
+      192
+    ],
+    "symbolic_shape": "(C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "wte.weight.exp_avg",
+    "shape": [
+      65,
+      192
+    ],
+    "symbolic_shape": "(V, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "wte.weight.exp_avg_sq",
+    "shape": [
+      65,
+      192
+    ],
+    "symbolic_shape": "(V, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "wpe.weight.exp_avg",
+    "shape": [
+      128,
+      192
+    ],
+    "symbolic_shape": "(T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "wpe.weight.exp_avg_sq",
+    "shape": [
+      128,
+      192
+    ],
+    "symbolic_shape": "(T, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.0.ln_1.weight.exp_avg",
+    "shape": [
+      192
+    ],
+    "symbolic_shape": "(C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.0.ln_1.weight.exp_avg_sq",
+    "shape": [
+      192
+    ],
+    "symbolic_shape": "(C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.0.attn.c_attn.weight.exp_avg",
+    "shape": [
+      576,
+      192
+    ],
+    "symbolic_shape": "(3C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.0.attn.c_attn.weight.exp_avg_sq",
+    "shape": [
+      576,
+      192
+    ],
+    "symbolic_shape": "(3C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.0.attn.c_proj.weight.exp_avg",
+    "shape": [
+      192,
+      192
+    ],
+    "symbolic_shape": "(C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.0.attn.c_proj.weight.exp_avg_sq",
+    "shape": [
+      192,
+      192
+    ],
+    "symbolic_shape": "(C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.0.ln_2.weight.exp_avg",
+    "shape": [
+      192
+    ],
+    "symbolic_shape": "(C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.0.ln_2.weight.exp_avg_sq",
+    "shape": [
+      192
+    ],
+    "symbolic_shape": "(C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.0.mlp.c_fc.weight.exp_avg",
+    "shape": [
+      768,
+      192
+    ],
+    "symbolic_shape": "(4C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.0.mlp.c_fc.weight.exp_avg_sq",
+    "shape": [
+      768,
+      192
+    ],
+    "symbolic_shape": "(4C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.0.mlp.c_proj.weight.exp_avg",
+    "shape": [
+      192,
+      768
+    ],
+    "symbolic_shape": "(C, 4C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.0.mlp.c_proj.weight.exp_avg_sq",
+    "shape": [
+      192,
+      768
+    ],
+    "symbolic_shape": "(C, 4C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.1.ln_1.weight.exp_avg",
+    "shape": [
+      192
+    ],
+    "symbolic_shape": "(C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.1.ln_1.weight.exp_avg_sq",
+    "shape": [
+      192
+    ],
+    "symbolic_shape": "(C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.1.attn.c_attn.weight.exp_avg",
+    "shape": [
+      576,
+      192
+    ],
+    "symbolic_shape": "(3C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.1.attn.c_attn.weight.exp_avg_sq",
+    "shape": [
+      576,
+      192
+    ],
+    "symbolic_shape": "(3C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.1.attn.c_proj.weight.exp_avg",
+    "shape": [
+      192,
+      192
+    ],
+    "symbolic_shape": "(C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.1.attn.c_proj.weight.exp_avg_sq",
+    "shape": [
+      192,
+      192
+    ],
+    "symbolic_shape": "(C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.1.ln_2.weight.exp_avg",
+    "shape": [
+      192
+    ],
+    "symbolic_shape": "(C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.1.ln_2.weight.exp_avg_sq",
+    "shape": [
+      192
+    ],
+    "symbolic_shape": "(C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.1.mlp.c_fc.weight.exp_avg",
+    "shape": [
+      768,
+      192
+    ],
+    "symbolic_shape": "(4C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.1.mlp.c_fc.weight.exp_avg_sq",
+    "shape": [
+      768,
+      192
+    ],
+    "symbolic_shape": "(4C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.1.mlp.c_proj.weight.exp_avg",
+    "shape": [
+      192,
+      768
+    ],
+    "symbolic_shape": "(C, 4C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.1.mlp.c_proj.weight.exp_avg_sq",
+    "shape": [
+      192,
+      768
+    ],
+    "symbolic_shape": "(C, 4C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.2.ln_1.weight.exp_avg",
+    "shape": [
+      192
+    ],
+    "symbolic_shape": "(C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.2.ln_1.weight.exp_avg_sq",
+    "shape": [
+      192
+    ],
+    "symbolic_shape": "(C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.2.attn.c_attn.weight.exp_avg",
+    "shape": [
+      576,
+      192
+    ],
+    "symbolic_shape": "(3C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.2.attn.c_attn.weight.exp_avg_sq",
+    "shape": [
+      576,
+      192
+    ],
+    "symbolic_shape": "(3C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.2.attn.c_proj.weight.exp_avg",
+    "shape": [
+      192,
+      192
+    ],
+    "symbolic_shape": "(C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.2.attn.c_proj.weight.exp_avg_sq",
+    "shape": [
+      192,
+      192
+    ],
+    "symbolic_shape": "(C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.2.ln_2.weight.exp_avg",
+    "shape": [
+      192
+    ],
+    "symbolic_shape": "(C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.2.ln_2.weight.exp_avg_sq",
+    "shape": [
+      192
+    ],
+    "symbolic_shape": "(C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.2.mlp.c_fc.weight.exp_avg",
+    "shape": [
+      768,
+      192
+    ],
+    "symbolic_shape": "(4C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.2.mlp.c_fc.weight.exp_avg_sq",
+    "shape": [
+      768,
+      192
+    ],
+    "symbolic_shape": "(4C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.2.mlp.c_proj.weight.exp_avg",
+    "shape": [
+      192,
+      768
+    ],
+    "symbolic_shape": "(C, 4C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.2.mlp.c_proj.weight.exp_avg_sq",
+    "shape": [
+      192,
+      768
+    ],
+    "symbolic_shape": "(C, 4C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.3.ln_1.weight.exp_avg",
+    "shape": [
+      192
+    ],
+    "symbolic_shape": "(C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.3.ln_1.weight.exp_avg_sq",
+    "shape": [
+      192
+    ],
+    "symbolic_shape": "(C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.3.attn.c_attn.weight.exp_avg",
+    "shape": [
+      576,
+      192
+    ],
+    "symbolic_shape": "(3C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.3.attn.c_attn.weight.exp_avg_sq",
+    "shape": [
+      576,
+      192
+    ],
+    "symbolic_shape": "(3C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.3.attn.c_proj.weight.exp_avg",
+    "shape": [
+      192,
+      192
+    ],
+    "symbolic_shape": "(C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.3.attn.c_proj.weight.exp_avg_sq",
+    "shape": [
+      192,
+      192
+    ],
+    "symbolic_shape": "(C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.3.ln_2.weight.exp_avg",
+    "shape": [
+      192
+    ],
+    "symbolic_shape": "(C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.3.ln_2.weight.exp_avg_sq",
+    "shape": [
+      192
+    ],
+    "symbolic_shape": "(C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.3.mlp.c_fc.weight.exp_avg",
+    "shape": [
+      768,
+      192
+    ],
+    "symbolic_shape": "(4C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.3.mlp.c_fc.weight.exp_avg_sq",
+    "shape": [
+      768,
+      192
+    ],
+    "symbolic_shape": "(4C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.3.mlp.c_proj.weight.exp_avg",
+    "shape": [
+      192,
+      768
+    ],
+    "symbolic_shape": "(C, 4C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.3.mlp.c_proj.weight.exp_avg_sq",
+    "shape": [
+      192,
+      768
+    ],
+    "symbolic_shape": "(C, 4C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.4.ln_1.weight.exp_avg",
+    "shape": [
+      192
+    ],
+    "symbolic_shape": "(C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.4.ln_1.weight.exp_avg_sq",
+    "shape": [
+      192
+    ],
+    "symbolic_shape": "(C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.4.attn.c_attn.weight.exp_avg",
+    "shape": [
+      576,
+      192
+    ],
+    "symbolic_shape": "(3C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.4.attn.c_attn.weight.exp_avg_sq",
+    "shape": [
+      576,
+      192
+    ],
+    "symbolic_shape": "(3C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.4.attn.c_proj.weight.exp_avg",
+    "shape": [
+      192,
+      192
+    ],
+    "symbolic_shape": "(C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.4.attn.c_proj.weight.exp_avg_sq",
+    "shape": [
+      192,
+      192
+    ],
+    "symbolic_shape": "(C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.4.ln_2.weight.exp_avg",
+    "shape": [
+      192
+    ],
+    "symbolic_shape": "(C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.4.ln_2.weight.exp_avg_sq",
+    "shape": [
+      192
+    ],
+    "symbolic_shape": "(C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.4.mlp.c_fc.weight.exp_avg",
+    "shape": [
+      768,
+      192
+    ],
+    "symbolic_shape": "(4C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.4.mlp.c_fc.weight.exp_avg_sq",
+    "shape": [
+      768,
+      192
+    ],
+    "symbolic_shape": "(4C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.4.mlp.c_proj.weight.exp_avg",
+    "shape": [
+      192,
+      768
+    ],
+    "symbolic_shape": "(C, 4C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.4.mlp.c_proj.weight.exp_avg_sq",
+    "shape": [
+      192,
+      768
+    ],
+    "symbolic_shape": "(C, 4C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.5.ln_1.weight.exp_avg",
+    "shape": [
+      192
+    ],
+    "symbolic_shape": "(C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.5.ln_1.weight.exp_avg_sq",
+    "shape": [
+      192
+    ],
+    "symbolic_shape": "(C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.5.attn.c_attn.weight.exp_avg",
+    "shape": [
+      576,
+      192
+    ],
+    "symbolic_shape": "(3C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.5.attn.c_attn.weight.exp_avg_sq",
+    "shape": [
+      576,
+      192
+    ],
+    "symbolic_shape": "(3C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.5.attn.c_proj.weight.exp_avg",
+    "shape": [
+      192,
+      192
+    ],
+    "symbolic_shape": "(C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.5.attn.c_proj.weight.exp_avg_sq",
+    "shape": [
+      192,
+      192
+    ],
+    "symbolic_shape": "(C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.5.ln_2.weight.exp_avg",
+    "shape": [
+      192
+    ],
+    "symbolic_shape": "(C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.5.ln_2.weight.exp_avg_sq",
+    "shape": [
+      192
+    ],
+    "symbolic_shape": "(C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.5.mlp.c_fc.weight.exp_avg",
+    "shape": [
+      768,
+      192
+    ],
+    "symbolic_shape": "(4C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.5.mlp.c_fc.weight.exp_avg_sq",
+    "shape": [
+      768,
+      192
+    ],
+    "symbolic_shape": "(4C, C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.5.mlp.c_proj.weight.exp_avg",
+    "shape": [
+      192,
+      768
+    ],
+    "symbolic_shape": "(C, 4C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "blocks.5.mlp.c_proj.weight.exp_avg_sq",
+    "shape": [
+      192,
+      768
+    ],
+    "symbolic_shape": "(C, 4C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "ln_f.weight.exp_avg",
+    "shape": [
+      192
+    ],
+    "symbolic_shape": "(C)",
+    "dtype": "float32"
+  },
+  {
+    "stage": "optimizer_state",
+    "name": "ln_f.weight.exp_avg_sq",
+    "shape": [
+      192
+    ],
+    "symbolic_shape": "(C)",
+    "dtype": "float32"
+  }
+]

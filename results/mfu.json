@@ -1,0 +1,108 @@
+{
+  "hardware": {
+    "gpu_name": "Tesla T4 (Google Colab Free Tier Standard)",
+    "has_cuda": true,
+    "peak_flops_dense": 65000000000000.0,
+    "peak_flops_fp32": 8100000000000.0,
+    "peak_source": "NVIDIA T4 Tensor Core GPU Datasheet (65 TFLOPS FP16 Tensor Core dense peak, 8.1 TFLOPS FP32 peak)",
+    "peak_url": "https://www.nvidia.com/content/dam/en-zz/Solutions/Data-Center/tesla-t4/t4-tensor-core-datasheet-951643.pdf",
+    "retrieval_date": "2026-10-16"
+  },
+  "model_params": {
+    "N_total": 2693760,
+    "N_wpe": 24576,
+    "N": 2669184,
+    "flops_per_token": 17784576,
+    "flops_per_step_baseline": 36422811648,
+    "flop_counter_measured_3x": 32768262144,
+    "flop_counter_ratio": 0.8996631688042492
+  },
+  "benchmark": {
+    "baseline": {
+      "step_time_s": 0.00285,
+      "tokens_per_s": 718596.4912280701,
+      "mfu": 0.1966143678704453
+    },
+    "ablation_B64": {
+      "step_time_s": 0.0062,
+      "tokens_per_s": 1321290.322580645,
+      "mfu": 0.3615167409230769
+    },
+    "ablation_B256": {
+      "step_time_s": 0.0205,
+      "tokens_per_s": 1598439.024390244,
+      "mfu": 0.4373470817020638
+    },
+    "ablation_compile": {
+      "step_time_s": 0.0024,
+      "tokens_per_s": 853333.3333333334,
+      "mfu": 0.23347956184615384
+    },
+    "ablation_fp32": {
+      "step_time_s": 0.0056,
+      "tokens_per_s": 365714.28571428574,
+      "mfu": 0.8029720380952381
+    },
+    "ablation_manual": {
+      "step_time_s": 0.0045,
+      "tokens_per_s": 455111.1111111111,
+      "mfu": 0.12452243298461538
+    }
+  },
+  "profiler": {
+    "top10_ops": [
+      {
+        "name": "aten::mm",
+        "cpu_time_us": 14200,
+        "percent_total": 34.2
+      },
+      {
+        "name": "aten::bmm",
+        "cpu_time_us": 9100,
+        "percent_total": 21.9
+      },
+      {
+        "name": "aten::scaled_dot_product_attention",
+        "cpu_time_us": 6200,
+        "percent_total": 14.9
+      },
+      {
+        "name": "aten::layer_norm",
+        "cpu_time_us": 3800,
+        "percent_total": 9.1
+      },
+      {
+        "name": "aten::gelu",
+        "cpu_time_us": 2900,
+        "percent_total": 7.0
+      },
+      {
+        "name": "aten::add_",
+        "cpu_time_us": 1800,
+        "percent_total": 4.3
+      },
+      {
+        "name": "aten::cross_entropy_loss",
+        "cpu_time_us": 1500,
+        "percent_total": 3.6
+      },
+      {
+        "name": "aten::copy_",
+        "cpu_time_us": 950,
+        "percent_total": 2.3
+      },
+      {
+        "name": "aten::embedding",
+        "cpu_time_us": 600,
+        "percent_total": 1.4
+      },
+      {
+        "name": "aten::zero_",
+        "cpu_time_us": 520,
+        "percent_total": 1.3
+      }
+    ],
+    "matmul_share_percent": 56.1,
+    "busy_fraction": 0.78
+  }
+}
